@@ -4,6 +4,6 @@ export interface ISpacecraft {
   // fuelType: string,
   releaseYear: number;
   state: boolean;
-
-  fly(): void;
+  weight: number;
+  type: string;
 }

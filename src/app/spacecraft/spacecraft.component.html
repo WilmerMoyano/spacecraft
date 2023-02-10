@@ -1,1 +1,47 @@
-<p>spacecraft works!</p>
+<div>
+  <h1>Naves eyectables</h1>
+  <div class="card">
+    <ng-container *ngFor="let item of nave" >
+      <div *ngIf="item.type == 'Nave eyectable'" class="card__header">
+        <h2>{{ item.name }}</h2>
+        <p>año de lanzamiento: {{ item?.releaseYear }}</p>
+        <p>país: {{ item?.country }}</p>
+        <p>peso: {{ item?.weight }}</p>
+        <p>tipo  de combustible: {{ item?.fuelType }}</p>
+        <p>velocidad maxima: {{ item?.maximumSpeed }}</p>
+        <p>numero de tripulantes: {{ item?.numberOfCrew }}</p>
+        <p>fuerza de despegue: {{ item?.takeOffPower }}</p>
+        <p>estado de vuelo: {{ item?.state }}</p>
+      </div>
+    </ng-container>
+  </div>
+  <h1>Nave no tripuladas</h1>
+  <div class="card">
+    <ng-container *ngFor="let item of nave" >
+      <div *ngIf="item.type == 'Nave no tripulada'" class="card__header"> 
+        <h2>{{ item.name }}</h2>
+        <p>año de lanzamiento: {{ item?.releaseYear }}</p>
+        <p>país: {{ item?.country }}</p>
+        <p>peso: {{ item?.weight }}</p>
+        <p>tipo de combustible: {{ item?.fuelType }}</p>
+        <p>velocidad maxima sobre la orbita: {{ item?.meanVelocityOverOrbit }}</p>
+        <p>estado de orbitacion: {{ item?.state }}</p>
+      </div>
+    </ng-container>
+  </div>
+  <h1>Nave tripuladas</h1>
+  <div class="card">
+    <ng-container *ngFor="let item of nave" >
+      <div *ngIf="item.type == 'Nave tripulada'" class="card__header">
+        <h2>{{ item.name }}</h2>
+        <p>año de lanzamiento: {{ item?.releaseYear }}</p>
+        <p>país: {{ item?.country }}</p>
+        <p>tipo de combustible: {{ item?.fuelType }}</p>
+        <p>peso: {{ item?.weight }}</p>
+        <p>numero de tripulantes: {{ item?.numberOfCrew }}</p>
+        <p>velocidad maxima sobre la orbita: {{ item?.meanVelocityOverOrbit }}</p>
+        <p>estado de orbitacion: {{ item?.state }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
